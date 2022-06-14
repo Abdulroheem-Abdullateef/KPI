@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<KpiNew.Dtos.KpiDto>
+@{
+    Layout = "_KpiLayout";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class=" card col-md-6">
+            <div class="card-body ">
+                <div class="bg-light">
+                    <h1 class="tagcolor" style="color:forestgreen">Register KpiResult</h1>
+                    <p class="tagcolor" style="color:mediumblue">Please fill in this form to Create KpiResult.</p>
+                    <hr class="tagcolor" style="color:mediumblue">
+
+                </div>
+                <form asp-action="Create" enctype="multipart/form-data">
+                    @foreach (var item in Model)
+                   {
+                       <div class="row mb-3">
+                          <label style="width: 70px;" for="inputText" class="col-sm-2 col-form-label">@Html.DisplayFor(e => item.Name)</label>
+                          <div class="col-sm-10">
+                            <input name= @Html.DisplayFor( d => item.Id) type="text" class="form-control" >
+                          </div>
+                       </div>
+                   }
+                   <div class="row mb-3">
+                          <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                          </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+

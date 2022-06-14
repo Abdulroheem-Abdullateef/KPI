@@ -1,0 +1,77 @@
+﻿
+@model IEnumerable<KpiNew.Dtos.KpiResultDto>
+
+
+<div class="card-header"  style="background-color:green;">
+    <div class="card-title">
+        <h1  class=" justify-contest-center">Kpi</h1>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Month)
+            </th>
+           
+              <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+           
+              <th>
+                @Html.DisplayNameFor(model => model.TotalPercentage)
+            </th>
+           
+
+            <th>
+                Update
+            </th>
+            <th>
+                Details
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kpiResult in Model)
+        {
+            <tr>
+                 <td>
+                    @Html.DisplayFor(modelItem => kpiResult.DateCreated)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => kpiResult.Month)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => kpiResult.Year)
+                </td>
+
+                 <td>
+                    @Html.DisplayFor(modelItem => kpiResult.TotalPercentage)
+                </td>
+              
+                <td>
+                    <a asp-action="Update" asp-route-id="@kpiResult.Id">Update</a>
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@kpiResult.Id">Details</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-controller="KpiResult" asp-route-id="@kpiResult.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button style="background-color:wheat;"><a asp-controller="KpiResult" asp-action="Create">Register Kpi</a> </button>
+

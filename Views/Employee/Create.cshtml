@@ -1,0 +1,129 @@
+@model KpiNew.Dtos.CreateEmployeeRequestModel
+@using KpiNew.Enum
+@{
+    Layout = null;
+}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class=" card col-md-6">
+            <div class="card-body ">
+                <div class="bg-light">
+                    <h1 class="tagcolor" style="color:forestgreen">Create Employee</h1>
+                    <p class="tagcolor" style="color:green">Please fill in this form to create an Employee.</p>
+                    <hr class="tagcolor" style="color:greenyellow">
+
+                </div>
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label asp-for="FirstName" class="control-label"></label>
+                            <input asp-for="FirstName" class="form-control" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="LastName" class="control-label"></label>
+                            <input asp-for="LastName" class="form-control" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="PhoneNumber" class="control-label"></label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="Address" class="control-label"></label>
+                            <input asp-for="Address" class="form-control" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="City" class="control-label"></label>
+                            <input asp-for="City" class="form-control" />
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+
+
+
+                        <div class="form-group col-sm-6">
+                            <label asp-for="DateOfBirth" class="control-label"></label>
+                            <input asp-for="DateOfBirth" class="form-control" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+
+
+                            <div class="form-group col-sm-6">
+                                <label asp-for="Gender" class="control-label"></label>
+                                <select asp-for="Gender" asp-items="@Html.GetEnumSelectList(typeof(Gender))"
+                                    required></select>
+                                <span asp-validation-for="Gender" class="text-danger"></span>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                           <div class="col-md-6" style="margin-top: 20px; font-size: larger; font-weight: bold; color: darkcyan">
+                            <label class="control-label">Role</label>
+                            <select asp-for="Roles" class="form-control" asp-items="ViewBag.Role" multiple required>
+                                <option value="">--Select Roles--</option>
+                            </select>
+                        </div>
+
+
+
+                        
+                        <div class="form-row">
+
+                            <div class="col-md-6"
+                                style="margin-top: 20px; font-size: larger; font-weight: bold; color: darkcyan">
+                                <label class="control-label">Department</label>
+                                <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.Departments" multiple required>
+                                    <option value="">--Select Department--</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="control-label">Select Employee Photo</label>
+                            <input name="employeePhoto" type="file" class="form-control" />
+                        </div>
+
+
+                        <div class="form-group ">
+                            <input href="#myModal" type="submit" value="Submit"
+                                class="btn btn-success trigger-btn col-sm-12" data-toggle="modal" />
+                        </div>
+
+                </form>
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

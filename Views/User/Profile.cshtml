@@ -1,0 +1,38 @@
+﻿@model  KpiNew.Dtos.UserDto
+
+
+
+@using Microsoft.AspNetCore.Http;
+
+    <dt class="col-sm-2">
+        Email:
+    </dt>
+    <dd class="col-sm-10">
+        @Model.Email
+    </dd>
+    
+    <dt class="col-sm-2">
+        Role:
+    </dt>
+   @foreach (var item in Model.Roles)
+   {
+        <dd class="col-sm-10">
+            @item.Name
+        </dd>
+       
+        <dt class="col-sm-2">
+        Discription:
+       </dt>
+    
+        <dd class="col-sm-10">
+            @item.Description
+        </dd>
+
+   }
+
+    }
+  
+
+</dl>
+
+

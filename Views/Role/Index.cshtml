@@ -1,0 +1,75 @@
+﻿
+@model IEnumerable<KpiNew.Dtos.RoleDto>
+
+
+<div class="card-header" style="background-color:green;">
+    <div class="card-title">
+        <h1 class="text-center">Role</h1>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+           
+             
+
+
+             
+
+
+
+
+
+            <th>
+                Update
+            </th>
+            <th>
+                Details
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var admin in Model)
+        {
+            <tr>
+                 <td>
+                    @Html.DisplayFor(modelItem => admin.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => admin.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => admin.Description)
+                </td>
+             
+
+                <td>
+                    <a asp-action="Update" asp-route-id="@admin.Id">Update</a>
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@admin.Id">Details</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@admin.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button style="background-color:wheat;"><a asp-controller="Role" asp-action="Create">Register Role</a> </button>
+
