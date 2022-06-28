@@ -32,12 +32,7 @@
             <th>
                 Update
             </th>
-            <th>
-                Details
-            </th>
-            <th>
-                Delete
-            </th>
+           
         </tr>
     </thead>
     <tbody>
@@ -63,12 +58,8 @@
                 <td>
                     <a asp-action="Update" asp-route-id="@kpiResult.Id">Update</a>
                 </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@kpiResult.Id">Details</a>
-                </td>
-                <td>
-                    <a asp-action="Delete" asp-controller="KpiResult" asp-route-id="@kpiResult.Id">Delete</a>
-                </td>
+              
+              
             </tr>
         }
     </tbody>

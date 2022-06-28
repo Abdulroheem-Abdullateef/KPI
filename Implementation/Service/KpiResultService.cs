@@ -140,6 +140,7 @@ namespace KpiNew.Implementation.Service
             {
                 DateCreated = a.DateCreated,
                 Month = a.Month,
+                Id = a.Id,
                 TotalPercentage = a.TotalPercentage,
                 Year = a.Year
             }).ToList();
@@ -198,6 +199,7 @@ namespace KpiNew.Implementation.Service
                     {
                         DateCreated = kpiResult.DateCreated,
                         Month = kpiResult.Month,
+                        Id = kpiResult.Id,
                         TotalPercentage = kpiResult.TotalPercentage,
                         Year = kpiResult.Year,
                     }

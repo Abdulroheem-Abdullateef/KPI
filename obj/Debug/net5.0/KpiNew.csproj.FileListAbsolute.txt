@@ -93,3 +93,4 @@ C:\Users\BDUL LATEEF\Desktop\KpiNew\KpiNew\obj\Debug\net5.0\Razor\Views\User\Das
 C:\Users\BDUL LATEEF\Desktop\KpiNew\KpiNew\obj\Debug\net5.0\Razor\Views\Employee\GetAllEmployeeByDepartmentName.cshtml.g.cs
 C:\Users\BDUL LATEEF\Desktop\KpiNew\KpiNew\obj\Debug\net5.0\Razor\Views\KpiResult\Update.cshtml.g.cs
 C:\Users\BDUL LATEEF\Desktop\KpiNew\KpiNew\obj\Debug\net5.0\Razor\Views\Employee\GetAllEmployee.cshtml.g.cs
+C:\Users\BDUL LATEEF\Desktop\KpiNew\KpiNew\obj\Debug\net5.0\Razor\Views\KpiResult\Details.cshtml.g.cs
